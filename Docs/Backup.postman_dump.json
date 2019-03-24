@@ -1,0 +1,155 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"id": "9b2ad3bb-f093-4e79-8a3d-e54a94f4a540",
+			"name": "Bankslip",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"5014d6db-65bd-42de-a8e0-ac11f5bc9e53",
+				"fd023b82-a540-4421-a702-b66503984777",
+				"2c36c66c-ed45-41d2-9b83-d207e18d86a3",
+				"464a7060-9b8e-4e11-b683-a9dacb0fa5a5"
+			],
+			"folders_order": [],
+			"folders": [],
+			"requests": [
+				{
+					"id": "2c36c66c-ed45-41d2-9b83-d207e18d86a3",
+					"name": "createBankslip",
+					"url": "{{protocol}}://{{server}}:{{port}}/bankslips",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Content-Type",
+							"type": "text",
+							"value": "application/json"
+						}
+					],
+					"method": "POST",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "9b2ad3bb-f093-4e79-8a3d-e54a94f4a540",
+					"rawModeData": "{\n\t\"dueDate\" : \"2019-03-22\",\n\t\"totalInCents\" : 20.00,\n\t\"customer\" : \"Marcio\"\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "464a7060-9b8e-4e11-b683-a9dacb0fa5a5",
+					"name": "payBankslip",
+					"url": "{{protocol}}://{{server}}:{{port}}/bankslips/e2f7d32b-8978-44ee-a7c5-bebd3b46feec/pay",
+					"description": "",
+					"data": [],
+					"dataMode": "raw",
+					"headerData": [
+						{
+							"description": "",
+							"enabled": true,
+							"key": "Content-Type",
+							"type": "text",
+							"value": "application/json"
+						}
+					],
+					"method": "PUT",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "9b2ad3bb-f093-4e79-8a3d-e54a94f4a540",
+					"rawModeData": "{\n\t\"paymentDate\" : \"2019-03-24\"\n}",
+					"headers": "Content-Type: application/json\n",
+					"pathVariables": {}
+				},
+				{
+					"id": "5014d6db-65bd-42de-a8e0-ac11f5bc9e53",
+					"name": "listBacklips",
+					"url": "{{protocol}}://{{server}}:{{port}}/bankslips",
+					"description": "",
+					"data": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "9b2ad3bb-f093-4e79-8a3d-e54a94f4a540",
+					"pathVariables": {}
+				},
+				{
+					"id": "fd023b82-a540-4421-a702-b66503984777",
+					"name": "getBacklip",
+					"url": "{{protocol}}://{{server}}:{{port}}/bankslips/40966ac3-818d-4be6-bd3c-48347ee31df9",
+					"description": "",
+					"data": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "9b2ad3bb-f093-4e79-8a3d-e54a94f4a540",
+					"pathVariables": {}
+				}
+			]
+		}
+	],
+	"environments": [
+		{
+			"id": "1831e58f-d1d7-4fee-81df-a0dadfe31dfc",
+			"name": "Local",
+			"values": [
+				{
+					"key": "protocol",
+					"value": "http",
+					"type": "text",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "server",
+					"value": "localhost",
+					"type": "text",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "port",
+					"value": "8080",
+					"type": "text",
+					"description": "",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "ce5c8052-7211-4b00-bad8-dbcdec7a0897",
+			"name": "My Workspace - globals",
+			"values": []
+		}
+	],
+	"headerPresets": [],
+	"globals": []
+}
